@@ -11,7 +11,7 @@
 // Test data:
 // § Data1:[5,2,4,1,15,8,3] § Data2:[16,6,10,5,6,1,4]
 // GOOD LUCK😀
-
+/*
 const calcAverageHumanAge = function (ages) {
   const calcHumanAge = ages.map((age) => (age <= 2 ? age * 2 : 16 + age * 4));
   console.log(calcHumanAge);
@@ -19,6 +19,16 @@ const calcAverageHumanAge = function (ages) {
   console.log(adults);
   const average = adults.reduce((a, b, i, arr) => a + b / arr.length, 0);
   console.log(average);
+};
+*/
+
+// Chaning Methods
+const calcAverageHumanAge = function (ages) {
+  const calcHumanAge = ages
+    .map((age) => (age <= 2 ? age * 2 : 16 + age * 4))
+    .filter((a) => a >= 18)
+    .reduce((a, b, i, arr) => a + b / arr.length, 0);
+  console.log(calcHumanAge);
 };
 
 calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
